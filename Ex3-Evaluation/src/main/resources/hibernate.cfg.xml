@@ -1,0 +1,21 @@
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- 1. Configuration de la connexion à la base de données -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ex3evaluation?zeroDateTimeBehavior=convertToNull</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">malak123</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="ma.projet.beans.Employe"/>
+        <mapping class="ma.projet.beans.Tache"/>
+        <mapping class="ma.projet.beans.Projet"/>
+        <mapping class="ma.projet.beans.EmployeTache"/>
+        <mapping class="ma.projet.beans.EmployeTacheId"/>
+
+    </session-factory>
+</hibernate-configuration>

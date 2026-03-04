@@ -1,0 +1,18 @@
+package ma.projet.service;
+
+import ma.projet.classes.LigneCommande;
+import ma.projet.classes.Produit;
+import ma.projet.dao.IDao;
+import ma.projet.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import java.util.List;
+
+public class LigneCommandeService extends AbstractFacade<LigneCommande> {
+
+    public LigneCommandeService() {
+        super(LigneCommande.class);
+    }
+
+}

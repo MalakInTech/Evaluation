@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- 1. Configuration de la connexion à la base de données -->
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.url">jdbc:h2:mem:magasin;DB_CLOSE_DELAY=-1</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- 2. Dialect Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- 3. Options -->
+        <property name="hibernate.show_sql">true</property>       <!-- Affiche les requêtes SQL dans la console -->
+        <property name="hibernate.format_sql">true</property>     <!-- Formate joliment le SQL -->
+        <property name="hibernate.hbm2ddl.auto">create</property> <!-- Crée automatiquement les tables à chaque lancement -->
+
+        <!-- 4. Classes entités -->
+        <mapping class="ma.projet.classes.Categorie"/>
+        <mapping class="ma.projet.classes.Produit"/>
+        <mapping class="ma.projet.classes.Commande"/>
+        <mapping class="ma.projet.classes.LigneCommande"/>
+
+    </session-factory>
+</hibernate-configuration>
